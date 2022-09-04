@@ -3,21 +3,24 @@ import classes from './MainNavigation.module.css';
 
 const MainNavigation = () => {
   return (
-    <div>
       <header className={classes.header}>
-        <h1>vitamin board</h1>
-        <nav>
+        <div className = {classes.logo}>vitamin777 board</div>
+        <nav className={classes.nav}>
           <ul>
             <li>
-              <NavLink to="/quoteList">모든 게시글</NavLink>
+              <NavLink activeClassName={classes.active} to="/quotes">
+                모든 게시글
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/quoteForm">새 게시글 추가</NavLink>
+              <NavLink activeClassName={classes.active} to="/new-quote">
+                새 게시글 추가
+              </NavLink>
             </li>
           </ul>
         </nav>
       </header>
-    </div>
+
   );
 };
 export default MainNavigation;

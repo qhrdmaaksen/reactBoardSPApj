@@ -12,14 +12,14 @@ const Comments = () => {
   
   return (
     <section className={classes.comments}>
-      <h2>User Comments</h2>
+      <h2>사용자 댓글</h2>
       {!isAddingComment && (
         <button className='btn' onClick={startAddCommentHandler}>
-          Add a Comment
+          댓글 추가
         </button>
       )}
       {isAddingComment && <NewCommentForm />}
-      <p>Comments...</p>
+      <p>댓글...</p>
     </section>
   );
 };
