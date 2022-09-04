@@ -1,4 +1,5 @@
 import classes from './QuoteItem.module.css';
+import {Link} from 'react-router-dom';
 
 const QuoteItem = props => {
   return (
@@ -9,7 +10,10 @@ const QuoteItem = props => {
         </blockquote>
         <figcaption>{props.author}</figcaption>
       </figure>
-      <a className="btn" href="/">View Fullscreen</a>
+      {/*더비데이터의 id 추출하여 경로 구성*/}
+      <Link className="btn" to={`/quotes/${props.id}`}>
+        View Fullscreen
+      </Link>
     </li>
   );
 };
