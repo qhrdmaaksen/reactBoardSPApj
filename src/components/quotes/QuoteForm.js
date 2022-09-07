@@ -1,12 +1,14 @@
-import { useRef } from 'react';
+import { useRef, useState, Fragment } from 'react';
+import { Prompt } from 'react-router-dom';
 
 import Card from '../UI/Card';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import classes from './QuoteForm.module.css';
 
-const QuoteForm = (props) => {
+const QuoteForm = props => {
   const authorInputRef = useRef();
   const textInputRef = useRef();
+  const [isEntering, setIsEntering] = useState(false);
 
   function submitFormHandler(event) {
     event.preventDefault();
@@ -19,28 +21,42 @@ const QuoteForm = (props) => {
     props.onAddQuote({ author: enteredAuthor, text: enteredText });
   }
 
-  return (
-    <Card>
-      <form className={classes.form} onSubmit={submitFormHandler}>
-        {props.isLoading && (
-          <div className={classes.loading}>
-            <LoadingSpinner />
-          </div>
-        )}
+  const formFocusedHandler = () => {
+    setIsEntering(true);
+  };
 
-        <div className={classes.control}>
-          <label htmlFor='author'>Author</label>
-          <input type='text' id='author' ref={authorInputRef} />
-        </div>
-        <div className={classes.control}>
-          <label htmlFor='text'>Text</label>
-          <textarea id='text' rows='5' ref={textInputRef}></textarea>
-        </div>
-        <div className={classes.actions}>
-          <button className='btn'>Add Quote</button>
-        </div>
-      </form>
-    </Card>
+  const finishEnteringHandler = () => {
+    setIsEntering(false)
+  }
+
+  return (
+    <Fragment>
+      <Prompt
+        when={isEntering}
+        message={(location) => '입력을 끝내시겠습니까? 떠나시면 입력된 내용을 모두 잃습니다.'}
+      />
+      <Card>
+        <form onFocus={formFocusedHandler} className={classes.form} onSubmit={submitFormHandler}>
+          {props.isLoading && (
+            <div className={classes.loading}>
+              <LoadingSpinner />
+            </div>
+          )}
+
+          <div className={classes.control}>
+            <label htmlFor="author">작성자</label>
+            <input type="text" id="author" ref={authorInputRef} />
+          </div>
+          <div className={classes.control}>
+            <label htmlFor="text">작성 글</label>
+            <textarea id="text" rows="5" ref={textInputRef}></textarea>
+          </div>
+          <div className={classes.actions}>
+            <button onClick={finishEnteringHandler} className="btn">게시글 추가</button>
+          </div>
+        </form>
+      </Card>
+    </Fragment>
   );
 };
 
