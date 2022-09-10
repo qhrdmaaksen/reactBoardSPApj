@@ -36,7 +36,7 @@ const Comments = () => {
       </div>
     );
   }
-  if (status === 'completed' && !error && loadedComments && loadedComments.length > 0) {
+  if (status === 'completed' && loadedComments && loadedComments.length > 0) {
     comments = <CommentsList comments={loadedComments} />;
   }
   if (status === 'completed' && (!loadedComments || loadedComments.length === 0)) {

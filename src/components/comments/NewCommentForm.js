@@ -20,10 +20,8 @@ const NewCommentForm = props => {
     event.preventDefault();
     const enteredText = commentTextRef.current.value;
     sendRequest({
-      commentData: {
-        text: enteredText,
-        quoteId: props.quoteId,
-      },
+      commentData: {text: enteredText},
+        quoteId: props.quoteId
     });
   };
 
@@ -36,7 +34,7 @@ const NewCommentForm = props => {
         </div>
       )}
       <div className={classes.control} onSubmit={submitFormHandler}>
-        <label htmlFor="comment">당신의 댓글</label>
+        <label htmlFor="comment">사용자 댓글</label>
         <textarea id="comment" rows="5" ref={commentTextRef}></textarea>
       </div>
       <div className={classes.actions}>
