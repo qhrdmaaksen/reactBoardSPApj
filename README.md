@@ -47,40 +47,53 @@ Components
 ```
 
 게시글 목록
+
 ![reactBoardList](https://user-images.githubusercontent.com/75942405/198824268-939226d6-c451-4418-9706-533b24453fa4.png)
 
 게시글 상세보기
+
 ![reactBoardDetail](https://user-images.githubusercontent.com/75942405/198824278-846f5b70-10a8-465f-8cf6-83fa7625c009.png)
 
 새 게시글 추가
+
 ![reactBoardAdd](https://user-images.githubusercontent.com/75942405/198824294-a542b837-2db2-4b62-8705-489bede9ce9c.png)
 
 use Prompt react-router-dom
+
 ![reactBoardLeaveInput](https://user-images.githubusercontent.com/75942405/198824305-06e14755-23b4-482d-8822-43566518748f.png)
 
 게시글 등록
+
 ![reactBoardFireBaseWrite](https://user-images.githubusercontent.com/75942405/198824322-75fb938f-a65c-49e4-8868-daf65af878e6.png)
 
 FireBase 등록
+
 ![reactBoardFireBaseWrite02](https://user-images.githubusercontent.com/75942405/198824328-8f4a8368-f5fc-49ca-a6eb-2378cf98e5e2.png)
 
 게시글 목록 불러오기
+
 ![reactBoardLoadToData](https://user-images.githubusercontent.com/75942405/198824340-660603f9-0680-4fe1-990e-9ac5f63d2e4c.png)
 
 게시글 존재 하지 않을 시
+
 ![reactBoardListNotFound](https://user-images.githubusercontent.com/75942405/198824355-b0c8a7e2-304b-4f77-ad99-decaae1d3c2a.png)
 
 댓글 작성시
+
 ![reactBoardComments](https://user-images.githubusercontent.com/75942405/198824374-79447c45-1f0e-46ad-a189-1f70e911fdd3.png)
 
 댓글 FireBase 등록
+
 ![reactBoardFireBaseCommnet](https://user-images.githubusercontent.com/75942405/198824422-4424628e-386f-4a9d-9b62-112c08730993.png)
 
 댓글 목록
+
 ![reactBoardCommentsList](https://user-images.githubusercontent.com/75942405/198824431-843533bc-4dad-4060-80e9-9289c446fee7.png)
 
 로딩시 스피너
+
 ![reactBoardLoadingSpinner](https://user-images.githubusercontent.com/75942405/198824445-fa07fe16-adb8-4b60-88fe-eff0799b8619.png)
 
 Firebase deploy
+
 ![reactBoardDeploy](https://user-images.githubusercontent.com/75942405/198824454-88fc9d90-84d2-47f0-ab44-d4274f7fc264.png)
