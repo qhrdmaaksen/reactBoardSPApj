@@ -1,5 +1,5 @@
 # reactSPA-board-PJ
-## 코드는 재산이다, 나중에 도움된다, 정리잘하자
+## 게시판 만들기
 
 ```js
 project name : reactSPA-board-PJ
